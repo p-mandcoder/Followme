@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Follow Me Plans</title>
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="order.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="logo-div">
+                <img class="logo" src="logo3.png">
+                <a>Follow Me</a>
+        </div>
+        <header>
+            <a href="dashboard.html">
+                <img src="Home icon.png">
+                <span>Home</span>
+            </a>
+            <a href="order.html">
+                <img src="checkout.svg">
+                <span>Order</span>
+            </a>
+            <a href="plans.html">
+                <img src="business-plan.svg">
+                <span>Plans</span>
+            </a>
+            <a>
+                <img src="user.png">
+                <span>Profile</span>
+            </a>
+        </header>    
+        <main>
+            <section class="first-section">
+                
+            <p class="available-coin-balance">Available Coin Balance: <span class="acb-span"></span> Coins</p>
+            <p class="No-active">
+                
+                    </p>
+                <div class="order-div">
+                    
+                </div>
+            </section>
+        </main>
+    </body>
+    <script>
+        let balance=JSON.parse(localStorage.getItem('balance'))||0;
+        let order=JSON.parse(localStorage.getItem( 'order'))||[];
+        let accbalElem=document.querySelector('.acb-span');
+         accbalElem.innerHTML=balance;
+       
+         
+            
+           openOrder();
+
+        function openOrder(){
+            let orderDown='';
+            let noOrderElem=document.querySelector('.No-active');
+            
+
+
+           for(let i=0; i<order.length; i++){
+            const orderElem=order[i];
+            console.log(order);
+            const {Gains,Status,Amount}=orderElem;
+            const html=`    <div class="order-in-div">
+                                <div class="p-div">
+                                    <p class="order">
+                                        You will gain ${Amount} ${Gains},</p>
+                                    <p>Status: <span class="status">${Status}</span></p>
+                                </div>
+                                <button onclick="order.splice(${i}, 1);openOrder();" class="delete-button">Delete
+                                </button>
+                            </div>`
+                orderDown+=html;
+
+           };
+           
+             document.querySelector('.order-div').innerHTML=orderDown;
+
+           if(orderDown!==''){
+                noOrderElem.innerHTML='';
+           }
+           else{noOrderElem.innerHTML='No Ongoing orders'};
+         
+            
+           
+           localStorage.setItem('order', JSON.stringify(order));
+        };
+        
+
+        
+        
+        function deleteFromList(){
+            order.splice();
+             openOrder();
+
+        };
+        
+    </script>
+</html>

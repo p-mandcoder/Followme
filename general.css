@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0px 0px 50px 150px;
+}
+.logo-div{
+    display: flex;
+    align-items: center;
+    margin-left: -150px;
+}
+.logo-div a{
+    font-size: 110%;
+    font-family: 'Courier New', Courier, monospace;
+}
+.logo{
+    max-width: 120px;
+    max-height: 130px;
+    height: 12vh;
+    width: 20vw;
+    border-radius: 19px;
+    margin: 10px 2px 10px 2px;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color:  rgba(194, 200, 254, 0.411);
+    position: fixed;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    border-radius: 4px;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    border-top-right-radius: 15px;
+}
+
+header a{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header span{
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+header img{
+    width: clamp(30px, 5vw, 50px);
+}
+.available-coin-balance{
+    margin: 5px 0px 0px 50px;
+    font-size: clamp(1rem, 3vw, 2rem);
+}
+
+
+@media(max-width: 767px) {
+    body{
+    margin: 0;
+    padding-left: 5px;
+    padding-bottom: 70px;
+    }
+    .logo-div{
+    margin-left: 0px;
+    }
+    header{
+    background-color:  rgba(194, 200, 254, 0.906);
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    z-index: 10;
+    border-top-right-radius: 0px;
+    }
+    header a{
+        margin: 1px;
+    }
+}

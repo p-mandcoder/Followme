@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    padding: 0px 0px 50px 150px;
+}
+.logo-div{
+    margin-left: -150px;
+}
+.first-section{
+    display: flex;
+    justify-content: center;
+}
+.hero-div{
+    background-color: rgb(192, 220, 230);
+    width: clamp(300px, 79vw, 900px);
+    height: clamp(50px, 22vh, 250px);
+    border-radius: 30px;
+}
+.hero-p{
+    margin: 0px 0px 0px 30px;
+    padding: 20px 2px 1px 10px;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+.id-number{
+    margin: 10px 0px 0px 50px;
+    color: white;
+}
+.available-coin-balance{
+    margin: 5px 0px 0px 50px;
+}
+.second-section{
+   background-color: rgb(246, 235, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 30px 0px 0px;
+    border-radius: 10px;
+    padding: 0px 0px 10px 0px;
+}
+.tasks-p{
+    background-color: rgba(166, 170, 170, 0.689);
+    color: rgb(4, 64, 104);
+    padding: 10px;
+    font-size: clamp(0.2rem, 5vw, 1.5rem);
+    border-radius: 10px;
+}
+.task-div{
+    margin: 15px 0px 15px 0px;
+}
+.task-div img{
+    height: clamp(70px, 30vw, 300px);
+}
+.task-button,.next-button{
+    background-color: rgba(33, 48, 181, 0.669);
+    color: white;
+    border-style: none;
+    border-radius: 10px;
+    padding: 8px 10px 8px 10px;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+.task-button:active{
+    background-color: rgba(115, 123, 193, 0.669);
+}
+.next-button:active{
+    background-color: rgba(115, 123, 193, 0.669);
+}
+.coin-gain{
+    margin: 0px 0px 10px 0px;
+    font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+}
+
+.leaderboard-section{
+    background-color:  rgba(194, 216, 254, 0.566);
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px 10px 0px;
+    padding: 0px 0px 10px 0px;
+}
+
+.leaderb-p{
+    background-color: rgb(175, 166, 155);
+    text-align: center;
+    color: white;
+    padding: 10px 10px;
+}
+.leaderboard-div{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    margin: 10px 40px 0px 40px ;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.leaderboard-div img{
+    width: clamp(30px, 3vw, 20px);
+}
+.leaderboard-div p{
+    margin: 10px 0px 0px 5px;
+}
+.leaderboard-div span{
+    margin: 10px 5px 0px 15px;
+}
+
+
+
+@media(max-width: 767px) {
+    body{
+    margin: 0;
+    padding-left: 5px;
+    padding-bottom: 70px;
+    }
+    .logo-div{
+    margin-left: 0px;
+    }
+    header{
+    background-color:  rgba(194, 200, 254, 0.906);
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    z-index: 10;
+    border-top-right-radius: 0px;
+    }
+    header a{
+        margin: 1px;
+    }
+    .hero-div{
+    background-color: lightblue;
+    width: clamp(300px, 60vw, 700px);
+    justify-self: center;
+    height: clamp(50px, 20vh, 150px);
+    border-radius: 30px;
+    }
+    .hero-p{
+        margin: 2px 0px 0px 30px;
+    }
+    .id-number{
+        margin: 2px 0px 0px 50px;
+        color: white;
+    }
+    .second-section{
+    margin: 10px 20px 0px 10px;
+    }
+    .leaderboard-section{
+        width: 85vw;
+        margin: 10px 0px 0px 10px;
+        padding: 10px;
+    }
+
+}

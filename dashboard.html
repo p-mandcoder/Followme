@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="general.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <div class="logo-div">
+                <img class="logo" src="logo3.png">
+                <a>Follow Me</a>
+        </div>
+        <header>
+            <a href="dashboard.html">
+                <img src="Home icon.png">
+                <span>Home</span>
+            </a>
+            <a href="order.html">
+                <img src="checkout.svg">
+                <span>Order</span>
+            </a>
+            <a href="plans.html">
+                <img src="business-plan.svg">
+                <span>Plans</span>
+            </a>
+            <a>
+                <img src="user.png">
+                <span>Profile</span>
+            </a>
+        </header>
+        <main>
+            <section class="first-section">
+                <div class="hero-div">                    
+                    <p class="hero-p">Welcome back, <span class="username"></span></p> 
+                    <p class="id-number">ID.NO.:</p>
+                    <p class="available-coin-balance">Available Coin Balance: <span class="acb-span"></span> Coins</p>
+                </div>
+            </section>
+            <section class="second-section">
+                <p class="tasks-p">Tasks</p>
+                    <div class="task-div">
+                       <img src="satoru-gojo-black-7680x4320-14684.png">     
+                    </div>
+                    <div>
+                        <p >+<span class="coin-gain">5</span> Coins</p>
+                    <button class="task-button" onclick="task()">Like</button>
+                    <button class="next-button" onclick="coinChange();"> Next></button>
+                    </div>
+            </section>
+            <section class="leaderboard-section">
+                <p class="leaderb-p">Leader Board</p>
+                <div class="leaderboard-div">
+                    <img src="user.png">
+                    <p>Ahmed John</p>
+                    <span> ID: *****</span>
+                    <span>Followers Gained: </span>
+                </div>
+                <div class="leaderboard-div">
+                    <img src="user.png">
+                    <p>Ajax Ford</p>
+                    <span> ID: *****</span>
+                    <span>Followers Gained: </span>
+                </div>
+                <div class="leaderboard-div">
+                    <img src="user.png">
+                    <p>Onivi Ogunmepon</p>
+                    <span> ID: *****</span>
+                    <span>Followers Gained: </span>
+                </div>
+                <div class="leaderboard-div">
+                    <img src="user.png">
+                    <p>Davina Claire</p>
+                    <span> ID: *****</span>
+                    <span>Followers Gained: </span>
+                </div>
+                <div class="leaderboard-div">
+                    <img src="user.png">
+                    <p>Spencer James</p>
+                    <span> ID: *****</span>
+                    <span>Followers Gained: </span>
+                </div>
+                <div class="leaderboard-div">
+                    <img src="user.png">
+                    <p>James Bonds</p>
+                    <span> ID: *****</span>
+                    <span>Followers Gained: </span>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+    <script src="balance-calc.js"></script>
+</html>

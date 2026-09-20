@@ -1,0 +1,166 @@
+button:hover{
+    color: rgba(189, 194, 243, 0.669);
+}
+button:active{
+    color: aliceblue;
+    background-color:  rgba(132, 142, 232, 0.669) ;
+}
+.input{
+    margin: 20px 10px 20px 0px;
+    width: clamp(200px, 50vw, 400px);
+    height: clamp(20px, 5vh, 40px);
+}
+main:not(.Question-p){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.enter-button, button{
+    background-color: rgba(33, 48, 181, 0.669);
+    color: white;
+    border-style: none;
+    border-radius: 10px;
+    padding: 8px 10px 8px 10px;
+    font-family: 'Franklin Gothic Medium';
+}
+.enter-button:hover{
+    color: rgba(189, 194, 243, 0.669);
+}
+.enter-button:active{
+    color: aliceblue;
+    background-color:  rgba(132, 142, 232, 0.669) ;
+}
+.all-likes-div{
+    background-color: rgba(196, 180, 211, 0.769);
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 50px 50px 0px;
+    align-items: center;
+    max-width: max-content;
+    display: inline-block;
+}
+.g-likes{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+.likes-div{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 0.7fr 1fr 0.5fr;
+}
+
+.likes-div p{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin: 10px 10px 10px 5px;
+    color: rgba(32, 28, 49, 0.913);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.followers-section{
+    background-color: rgba(168, 118, 209, 0.432);
+    border-radius: 10px;
+    padding: 10px 20px 10px 10px;
+    margin: 10px 50px 50px 0px;
+    display: inline-block;
+    max-width: fit-content;
+    align-items: center;
+}
+.followers-div{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 0.5fr;
+}
+.followers-div p{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin: 10px 5px 10px 5px;
+    color: rgba(32, 28, 49, 0.913);
+    font-family: Georgia;
+}
+.Question-p{
+    display: block;
+    font-size: clamp(1rem, 3vw, 3rem);
+    width: clamp(100px, 150vw, 580px);
+    margin-left: 80px;
+    color: brown;
+}
+.buy-coins-section{
+    background-color: rgba(124, 47, 186, 0.432);
+    border-radius: 10px;
+    padding: 10px 20px 10px 10px;
+    margin: 10px 50px 50px 0px;
+    display: inline-block;
+    max-width: fit-content;
+    align-items: center;
+}
+.buy-coins-div{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1.3fr 2fr 1fr;
+}
+.buy-coins-div p{
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin: 10px 15px 10px 5px;
+    color: rgba(32, 28, 49, 0.913);
+    font-family: Georgia;
+}
+
+
+
+
+@media(max-width:767px){
+    .input-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 10px ;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .g-likes{
+        margin: 10px;
+    }
+    .all-likes-div{
+        background-color: rgba(196, 180, 211, 0.769);
+        border-radius: 10px;
+        padding: 10px 10px 5px 10px;
+        margin: 10px;
+    }
+    .likes-div{
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+    .likes-div p{
+        margin: 10px;
+    }
+    .followers-section{
+        background-color: rgba(168, 118, 209, 0.432);
+        border-radius: 10px;
+        padding: 10px 10px 5px 10px;
+        margin: 10px;
+    }
+    .followers-div{
+        grid-template-columns: 1.5fr 1.5fr 1fr;
+    }
+    .followers-div p{
+        margin: 10px 5px 10px 5px;
+    }
+    .Question-p{
+        font-size: clamp(1rem, 3vw, 3rem);
+        width: clamp(200px, 10vw, 500px);
+        margin: 10px 10px 10px 50px;
+    }
+    .buy-coins-section{
+        background-color: rgba(124, 47, 186, 0.432);
+        border-radius: 10px;
+        padding: 10px 10px 5px 10px;
+        margin: 10px;
+    }
+    .buy-coins-div{
+        grid-template-columns: 1.5fr 2.1fr 1fr;
+    }
+}

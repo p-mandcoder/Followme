@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" 
+        content="width=device-width, 
+        initial-scale=1.0">
+    </head>
+    <body>
+        <div class="login-main" style="display: flex;">
+            <div class="logo-div">
+                <img class="logo" src="logo3.png">
+                <a>Follow Me</a>
+            </div>
+            <div class="login-email-div">
+                <p>Login with email</p>
+                <input type="email" placeholder="Email" class="email">
+                <p class="no-email no-auth"></p>
+            </div>
+            <div class="login-password-div">
+                <p>Password</p>
+                <input type="password" placeholder="Password" class="password">
+                <p class="no-password  no-auth"></p>
+            </div>
+            <div class="submit-div">
+                <p class="login-success"></p>       
+                <input onclick="login()" type="submit" class="submit">
+                
+                <div>
+                    <p class="no-a">Dont have an account yet?</p>
+                    <button onclick="register()" class="register">
+                         Register
+                    </button>
+                </div>
+            </div>
+            <a class="forgot-password">Forgot Password?</a>
+
+        </div>
+        <div class="register-main">
+            <div class="logo-div">
+                <img class="logo" src="logo3.png">
+                <a>Follow Me</a>
+            </div>
+            <div class="login-email-div">
+                <p>Register with email</p>
+                <input type="email" placeholder="Email" class="reg-email">
+                <p class="no-reg-email no-auth"></p>
+            </div>
+            <div class="username-div">
+                <p>Username</p>
+                <input type="text" placeholder="username" class="username">
+                <p class="no-username no-auth"></p>
+            </div>
+
+            <div class="login-password-div">
+                <p>Password</p>
+                <input type="password" placeholder="Password" class="reg-password">
+                <p class="no-reg-password no-auth"></p>
+            </div>
+            <div class="submit-div">
+                <p class="reg-login-success"></p>       
+                <input onclick="submitRegister()" type="submit" class="submit">
+
+                <div>
+                    <p class="no-a">Already have an account?</p>
+                    <button onclick="register()" class="register">
+                         Login
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+    <script>
+
+            let usernameElem=document.querySelector('.username')
+
+            localStorage.setItem('username', usernameElem.value)
+        
+        
+        function login(){
+            let successElem=document.querySelector('.login-success')
+            let emailElem=document.querySelector('.email');
+            let noemailElem= document.querySelector('.no-email');
+
+            let passowordElem= document.querySelector('.password');
+            let nopasswordElem= document.querySelector('.no-password');
+
+            let hasError=false;
+            if(emailElem.value.trim()===''){
+                hasError=true
+                noemailElem.innerHTML='No Email added' 
+            }
+            else{noemailElem.innerHTML='' };
+            if(passowordElem.value===''){
+                hasError=true
+                nopasswordElem.innerHTML='No Password added'   
+            }
+            else{nopasswordElem.innerHTML=''};
+            
+            if(hasError===true){
+               return;
+            }
+            else{successElem.innerHTML='Login Success'};
+            if(successElem.innerHTML==='Login Success'){
+                window.location.href="dashboard.html"
+            };
+        };
+        
+        function submitRegister(){
+            let successElem=document.querySelector('.reg-login-success')
+
+            let emailElem=document.querySelector('.reg-email');
+            let noemailElem= document.querySelector('.no-reg-email');
+
+            let passowordElem= document.querySelector('.reg-password');
+            let nopasswordElem= document.querySelector('.no-reg-password');
+
+            let usernameElem=document.querySelector('.username');
+            let nousernameElem=document.querySelector('.no-username');
+
+            let hasError=false;
+
+            if(emailElem.value.trim()===''){
+                hasError=true
+                noemailElem.innerHTML='No Email added' 
+            }
+            else{noemailElem.innerHTML='' };
+
+            if(usernameElem.value.trim()===''){
+                hasError=true
+                nousernameElem.innerHTML='No username added'
+            }
+            else{nousernameElem.innerHTML=''};
+
+            if(passowordElem.value===''){
+                hasError=true
+                nopasswordElem.innerHTML='No Password added'   
+            }
+            else{nopasswordElem.innerHTML=''};
+
+            if(hasError===true){
+               return
+            }
+            else{successElem.innerHTML='Register Success'};
+            localStorage.setItem('username', usernameElem.value)
+
+            if(successElem.innerHTML==='Register Success'){
+                window.location.href='dashboard.html';
+            };
+        };
+
+        function register(){
+            let registerElem=document.querySelector('.register-main')
+            let loginElem=document.querySelector('.login-main')
+            if(loginElem.style.display==='flex'){
+                loginElem.style.display='none' 
+                registerElem.style.display='flex'
+            }
+            else{loginElem.style.display='flex'; registerElem.style.display='none'}
+        };
+
+        
+        
+    </script>
+</html>

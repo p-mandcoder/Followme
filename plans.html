@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Plans</title>
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="plans.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="logo-div">
+                <img class="logo" src="logo3.png">
+                <a>Follow Me</a>
+        </div>
+        <header>
+            <a href="dashboard.html">
+                <img src="Home icon.png">
+                <span>Home</span>
+            </a>
+            <a href="order.html">
+                <img src="checkout.svg">
+                <span>Order</span>
+            </a>
+            <a href="plans.html">
+                <img src="business-plan.svg">
+                <span>Plans</span>
+            </a>
+            <a>
+                <img src="user.png">
+                <span>Profile</span>
+            </a>
+        </header>    
+        <section>
+                <p>Enter your social media account URL/link</p>
+                <div class="input-div">
+                    <input class="input" type="text" placeholder="Enter URL">
+                    <button class="enter-button">Enter</button>
+                </div>
+        </section>
+            <p class="available-coin-balance">Available Coin Balance: <span class="acb-span"></span> Coins</p>
+            <p class="insufficient-bal"></p>    
+        <main>
+            
+           
+            <!--Likes section-->
+
+            <section class="all-likes-div">
+                <p class="g-likes">Get Likes</p>
+                <div class="likes-div">
+                    <p class="js-order1">10 likes </p>
+                    <p> Cost:<span class="cost-100">100</span> coins</p>
+                    <button onclick="getPlan(100)">Get</button>
+                </div>
+                <div class="likes-div">
+                   <p class="js-order2">20 likes </p>
+                   <p> Cost:<span class="cost-150">150</span> coins</p>
+                    <button onclick="getPlan(150)">Get</button>
+                </div>
+                <div class="likes-div">
+                    <p class="js-order3">50 likes </p>
+                    <p> Cost:<span class="cost-250">250</span> coins</p>
+                    <button onclick="getPlan(250)">Get</button>
+                </div>
+                <div class="likes-div">
+                    <p class="js-order4">100 likes </p>
+                    <p> Cost:<span class="cost-500">500</span> coins</p>
+                    <button onclick="getPlan(500)">Get</button>
+                </div>
+            </section>
+
+            <!-- Follow section-->  
+             
+                <section class="followers-section">
+                    <p class="g-likes">Get Followers</p>
+                    <div class="followers-div">
+                        <p class="js-order follower" >10 Followers </p>
+                        <p> Cost:<span class="cost">200</span> coins</p>
+                        <button onclick="getPlan(200)">Get</button>
+                    </div>
+                    <div class="followers-div">
+                        <p class="js-order">20 Followers </p>
+                        <p> Cost:<span class="cost">350</span> coins</p>
+                        <button onclick="getPlan(350)">Get</button>
+                    </div>
+                    <div class="followers-div">
+                        <p class="js-order">50 Followers </p>
+                        <p> Cost:<span class="cost">600</span> coins</p>
+                        <button onclick="getPlan(600)">Get</button>
+                    </div>
+                    <div class="followers-div">
+                        <p class="js-order">100 Followers </p>
+                        <p> Cost:<span class="cost">1000</span> coins</p>
+                        <button onclick="getPlan(1000)">Get</button>
+                    </div>
+                </section>
+                <p class="Question-p">Need Quick Engagement?</p>
+                <!--Get Coins-->
+                
+                <section class="buy-coins-section">
+                    <p class="g-likes">Buy coins</p>
+                    <div class="buy-coins-div">
+                        <p class="js-order">100 Coins </p>
+                        <p> Cost:<span class="cost">#1000</span> Naira</p>
+                        <button>Get</button>
+                    </div>
+                    <div class="buy-coins-div">
+                        <p class="js-order">200 Coins </p>
+                        <p> Cost:<span class="cost">#1500</span> Naira</p>
+                        <button>Get</button>
+                    </div>
+                    <div class="buy-coins-div">
+                        <p class="js-order">500 Coins </p>
+                        <p> Cost:<span class="cost">#3000</span> Naira</p>
+                        <button>Get</button>
+                    </div>
+                    <div class="buy-coins-div">
+                        <p class="js-order">1000 Coins </p>
+                        <p> Cost:<span class="cost">#5000</span> Naira</p>
+                        <button>Get</button>
+                    </div>
+                </section>
+                <div class="order"></div>
+        </main>
+        <footer></footer>
+    </body>
+    <script>
+        let balance=JSON.parse(localStorage.getItem('balance'))||0
+        let order=JSON.parse(localStorage.getItem( 'order'))||[{}]
+         let accbalElem=document.querySelector('.acb-span')
+         accbalElem.innerHTML=balance
+
+     /*   function jsNumbers(){
+            let orderElem1=document.querySelector('.js-order1')
+            let orderElem2=document.querySelector('.js-order2')
+            let orderElem3=document.querySelector('.js-order3')
+            let orderElem4=document.querySelector('.js-order4')
+            let orderElem5=document.querySelector('.js-order5')
+            let orderElem6=document.querySelector('.js-order6')
+            let orderElem7=document.querySelector('.js-order7')
+            let costElem1=document.querySelector('.cost-100')
+            let costElem2=document.querySelector('.cost-150')
+            let costElem3=document.querySelector('.cost-250')
+            let costElem4=document.querySelector('.cost-500')
+            
+
+        }
+    */
+
+        function getPlan(number){
+            
+            let balElem=document.querySelector('.acb-span')
+            let insuffBalElem=document.querySelector('.insufficient-bal')
+            if((number===100)&&balance>99){
+                insuffBalElem.innerHTML=''
+                balance-=100
+                balElem.innerHTML=balance
+                console.log(balance)
+                pusher(number)
+            }
+            else if(number===150&&balance>149){
+                insuffBalElem.innerHTML=''
+                balance-=150
+                balElem.innerHTML=balance
+                pusher(number)
+            }
+            else if(number===250&&balance>249){
+                insuffBalElem.innerHTML=''
+                balance-=250
+                balElem.innerHTML=balance
+                pusher(number)
+            }
+            else if(number===500&&balance>499){
+                insuffBalElem.innerHTML=''
+                balance-=500
+                balElem.innerHTML=balance
+                pusher(number)
+            }
+            else if(number===200&&balance>199){
+                insuffBalElem.innerHTML=''
+                balance-=200
+                balElem.innerHTML=balance
+                pusher(number)
+            }
+            else if(number===350&&balance>349){
+                insuffBalElem.innerHTML=''
+                balance-=350
+                balElem.innerHTML=balance
+                pusher(number)
+            }
+            else if(number===600&&balance>599){
+                insuffBalElem.innerHTML=''
+                balance-=600
+                balElem.innerHTML=balance
+                pusher(number)
+            }
+            else if(number===1000&&balance>999){
+                insuffBalElem.innerHTML=''
+                balance-=1000
+                balElem.innerHTML=balance
+                pusher(number)
+            }
+            
+            else{insuffBalElem.innerHTML='Insufficient Balance'};
+
+            
+                localStorage.setItem('balance',JSON.stringify(balance))
+        }
+
+
+        function getOrder(number){
+            let orderUp=''
+            for(let i=0; i<order.length; i++){
+                const orderObject=order[i]
+                const {Gains,Amount,Status}=orderObject
+                const html=`<p class="order">
+                            You will gain ${Amount} ${Gains},</p>
+                            <p>Status: ${Status}</p>
+                            <button onclick="order.splice(${i}, 1);getOrder();" class="delete-button">Delete
+                            </button>`
+                            
+                orderUp+=html
+            }
+  //          document.querySelector('.order').innerHTML=orderUp
+
+            localStorage.setItem('order',JSON.stringify(order))
+
+        }
+        function pusher(number){
+            let Gains=''
+            let Amount=''
+            let Status=''
+            if(number===100){
+                Gains="Likes"
+                Status="Ongoing"
+                Amount=10
+            }
+            if(number===150){
+                Gains="Likes"
+                Status="Ongoing"
+                Amount=20
+            }
+            if(number===250){
+                Gains="Likes"
+                Status="Ongoing"
+                Amount=50
+            }
+            if(number===500){
+                Gains="Likes"
+                Status="Ongoing"
+                Amount=100
+            }
+            if(number===200){
+                Gains="Followers"
+                Status="Ongoing"
+                Amount=10
+            }
+            if(number===350){
+                Gains="Followers"
+                Status="Ongoing"
+                Amount=20
+            }
+            if(number===600){
+                Gains="Followers"
+                Status="Ongoing"
+                Amount=50
+            }
+            if(number===1000){
+                Gains="Followers"
+                Status="Ongoing"
+                Amount=100
+            }
+            order.push({Gains,Status,Amount})
+            getOrder()
+        }
+        
+        function deleteFromList(){
+            order.splice([i],1)
+             getOrder()
+
+        }
+        
+
+    </script>
+</html>
