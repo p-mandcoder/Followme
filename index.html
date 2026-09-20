@@ -26,10 +26,13 @@
                 <a>Services</a>
                 <a>Contact</a>
             </div>
-            <div class="auth-button">
-                <a href="login.html">Login</a>
-                <a href="login.html">Register</a>
+            <div>
+                <a href="login.html" class="auth-button">
+                    <button class="landing-login-button">Login</button>
+                    <button class="landing-register-button">Register</button>
+                </a>
             </div>
+                  
             <div>
                 <img onclick="menu();" src="hamburger menu.png" class="hamburger-menu">
                   <div class="js-nav-bar">
@@ -61,10 +64,10 @@
                 </div>
                  
                 <div class="hero-text">
-                    <span class="small-block">
+                    <h1 class="small-block">
                         Grow Your Social Media 
                         Organically
-                    </span>
+                    </h1>
                    
                     <span class="big-block">
                         Earn followers, engagement
@@ -82,7 +85,7 @@
                 <div class="wwd-div">
                      <!--followers-->
                      <div class="wwd-followers">
-                        <span class="fo">FOLLOWERS</span>
+                        <h3 class="fo">FOLLOWERS</h3>
                         <img src="noun-followers-410373.png" 
                             class="followers-icon">
                         <span>
@@ -93,7 +96,7 @@
                      </div>
                     <!--Visibility-->
                      <div class="wwd-followers">
-                        <span class="fo">VISIBILITY</span>
+                        <h3 class="fo">VISIBILITY</h3>
                         <img src="noun-megaphone-5686000.png" 
                             class="mic-icon">
                         <span class="v-span">
@@ -103,7 +106,7 @@
                      </div>
                     <!--Engagement-->
                     <div class="wwd-followers">
-                        <span class="fo">ENGAGEMENT</span>
+                        <h3 class="fo">ENGAGEMENT</h3>
                         <img src="noun-engagement-8409749.png" 
                             class="engagement-icon">
                         <span>
@@ -122,7 +125,7 @@
                 <div class="wynu-div">
                     <!--Sales-->
                     <div class="sales-div">
-                        <p class="sales">SALES</p>
+                        <h3 class="sales">SALES</h3>
                         <img src="noun-sales-303640.png" class="sales-icon">
                         <p>More followers, 
                             equals higher visibility, 
@@ -130,7 +133,7 @@
                     </div>
                     <!--Growth-->
                     <div class="sales-div">
-                        <p class="sales">GROWTH</p>
+                        <h3 class="sales">GROWTH</h3>
                         <img src="noun-growth-7527393.png" class="sales-icon">
                         <p>Our platform encourages 
                             and guarantees growth for 
@@ -139,7 +142,7 @@
                     </div>
                     <!--Opportunities-->
                     <div class="sales-div">
-                        <p class="sales">OPPORTUNITIES</p>
+                        <h3 class="sales">OPPORTUNITIES</h3>
                         <img src="noun-opportunity-8282610.png" class="sales-icon">
                         <p>Exposure breeds Opportunity,
                             we are here to provide both.
@@ -171,27 +174,36 @@
                 </div>
             </section>
             <!--FAQs-->
-            <section class="FAQs">
+            <section class="faqs-div">
                 <!---->
-              <h3>FAQs</h3>      
-                <p class="js-faq1" onclick="
-                Faqs(1);
-                ">▼ What is Follow Me?</p>  
-                <p class="js-faq1-ans"></p>
-
-                <p class="js-faq2"
-                onclick="Faqs(2);"
-                >▼ How does the coin system work?</p>
-                <p class="js-faq2-ans"></p>
-
-                <p class="js-faq3" onclick="Faqs(3);">▼ Do I need to pay to use Follow Me?</p>
-                <p class="js-faq3-ans"></p>
-
-                <p class="js-faq4" onclick="Faqs(4);">▼ Is this real engagement?</p>
-                <p class="js-faq4-ans"></p>
-
-                <p class="js-faq5" onclick="Faqs(5);">▼ How do I get started?</p>
-                <p class="js-faq5-ans"></p>
+                <h3>FAQs</h3>
+                    <div class="faqs-in-div">
+                        <p class="js-faq1 js-q" onclick="
+                            Faqs(1);
+                            ">▼ What is Follow Me?
+                        </p>  
+                        <p class="js-faq1-ans js-ans" ></p>
+                    </div>
+                    <div class="faqs-in-div">
+                        <p class="js-faq2 js-q"
+                            onclick="Faqs(2);"
+                            >▼ How does the coin system work?
+                        </p>
+                        <p class="js-faq2-ans js-ans"></p>
+                    </div>
+                    <div class="faqs-in-div">
+                        <p class="js-faq3 js-q" onclick="Faqs(3);">▼ Do I need to pay to use Follow Me?</p>
+                        <p class="js-faq3-ans js-ans"></p>
+                    </div>
+                    <div class="faqs-in-div">
+                        <p class="js-faq4 js-q" onclick="Faqs(4);">▼ Is this real engagement?</p>
+                        <p class="js-faq4-ans js-ans"></p>
+                    </div>
+                    <div class="faqs-in-div">
+                        <p class="js-faq5 js-q" onclick="Faqs(5);">▼ How do I get started?</p>
+                        <p class="js-faq5-ans js-ans"></p>
+                    </div>
+                
             </section>
         </main>
         <footer>
@@ -200,84 +212,16 @@
                 <a>Follow Me</a>
             </div>
             <div class="F-auth">
-                <a href="dashboard.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="login.html">login</a>
                 <a href="login.html">Register</a>
             </div>
-            <div class="F-auth">
-                <a>About</a>
-                <a>Services</a>
-                <a>Contact</a>
+            <div class="contact-div">
+                <p>In need of a website? </p>
+                <p>Contact me on Whatsapp & Telegram: 08072495565</p>
+ 
             </div>
         </footer>
     </body>
-    <script>
-        function Faqs(number){
-   /*         if(number){
-                  let faqElement= document.querySelector('.js-faq1-ans');
-                if(true){
-                    faqElement.innerHTML=''
-                }
-                else{faqElement.innerHTML!=''}
-            };
-   */   let faqElement=''
-             if(number===1){
-                  let faqElement= document.querySelector('.js-faq1-ans');
-                if(faqElement.innerHTML===''){
-                    faqElement.innerHTML= 'FollowMe is a platform dedicated to bringing FOLLOWERS, ENGAGEMENT and VISIBILITY to brands and user accounts.'
-                    
-                }
-                else{faqElement.innerHTML=''};
-            }
-            else if(number===2){
-                  let faqElement= document.querySelector('.js-faq2-ans')
-                if(faqElement.innerHTML===''){
-                    faqElement.innerHTML=`
-                    Follow the steps on the dashboard and 
-                    get followers`
-                }
-                else{faqElement.innerHTML=''}
-
-            }
-            else if(number===3){
-                let faqElement= document.querySelector('.js-faq3-ans')
-                if(faqElement.innerHTML===''){
-                    faqElement.innerHTML=`
-                    No payment is NEEDED to use FOLLOW ME,
-                    however, to get organic followers fast, it is recommended.`
-                }
-                else{faqElement.innerHTML=''}
-            }
-            else if(number===4){
-                let faqElement= document.querySelector('.js-faq4-ans')
-                if(faqElement.innerHTML===''){
-                    faqElement.innerHTML=`
-                    Yes, all followers, likes, comments and overall
-                    engagement gotten from FOLLOW ME are real and authentic`
-                }
-                else{faqElement.innerHTML=''}
-            }
-            else if(number===5){
-                let faqElement=document.querySelector('.js-faq5-ans')
-                if(faqElement.innerHTML===''){
-                    faqElement.innerHTML=`
-                    Go to 'HOW TO START' above`
-                }
-                else{faqElement.innerHTML=''}
-            };
-         
-
-        };
-
-
-
-         function menu(){
-            let menuElement=document.querySelector('.js-nav-bar')
-            if(menuElement.style.display==='flex'){
-                menuElement.style.display='none';
-            }
-            else{menuElement.style.display='flex'}
-        };
-        
-    </script>
+    <script src="index.js"></script>
 </html>

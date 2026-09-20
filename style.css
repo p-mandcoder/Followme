@@ -117,28 +117,50 @@ header div{
 }
 .nav-bar a:hover{
     color: red;
+    cursor: pointer;
 }
 .auth-button{
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    width: 12vw;
+    grid-template-columns: 1fr 1fr;
 }
-.auth-button a{
-    color: white;
-    background-color: rgba(33, 48, 181, 0.669);
+.landing-login-button{
+    border-color: rgba(33, 48, 181, 0.669);
+    background-color: white;
+    border-width: 3px;
+    border-radius: 8px;
+    color:  rgba(33, 48, 181, 0.669);
     height: 4vh;
     width: 9vw;
-    max-height: 30px;
     max-width: 60px;
     text-align: center;
-    padding: 4px 3px 3px 3px;
-    border-radius: 8px;
-    margin: 2px 2px 2px 2px;   
+    padding: 4px 3px 23px 3px;
+    margin: 2px 2px 2px 2px; 
+    font-size: clamp(1rem, 1vw, 1.5rem);
 }
-.auth-button a:hover{
-    color: black;
+.landing-login-button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(33, 48, 181, 0.546);
 }
+.landing-register-button{
+    background-color: rgba(33, 48, 181, 0.669);
+    border-radius: 3px;
+    border: none;
+    color:  white;
+    height: 4vh;
+    width: 9vw;
+    max-width: 60px;
+    text-align: center;
+    padding: 5px 58px 22px 6px;
+    margin: 2px 5px 2px 10px;
+    font-size: clamp(0.9rem, 1vw, 1.5rem);
+}
+.landing-register-button:hover{
+    cursor: pointer;
+    color: rgba(33, 48, 181, 0.546);
+    background-color: white ;
+    
+}
+
 
 .hero-section{
    background-color: rgb(246, 235, 235);
@@ -201,15 +223,16 @@ header div{
     background-color: rgba(33, 48, 181, 0.669);
     padding: 2px 2px 3px 10px;
     border-radius: 10px;
+    margin-top: -10px;
 }
 .big-block{
-    width: clamp(200px, 49vw, 550px);
-    font-size: clamp(0.8rem, 6vw, 2rem);
+    width: clamp(200px, 40vw, 550px);
+    font-size: clamp(0.8rem, 5vw, 2rem);
     color: white;
     background-color: rgba(33, 48, 181, 0.669);
     padding: 2px 2px 3px 10px;
     border-radius: 10px;
-    margin: 20px 2px 5px 2px;
+    margin: 2px 2px 5px 2px;
 }
 .get-started-button{
     font-size: clamp(1rem, 2.9vw, 1.7rem);
@@ -315,15 +338,29 @@ header div{
     font-size: clamp(1rem, 5vw, 1.4rem);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.FAQs{
-    padding: 5px 5px 5px 30px;
-}
-.FAQs:hover{
+
+.js-q:hover{
     cursor: pointer;
 }
-.js-faq1:hover{
-    cursor: pointer;
+.faqs-div{
+    display: grid;
+    justify-content: center;
+
 }
+.faqs-in-div{
+    background-color: rgb(167, 209, 247);
+    border-radius: 8px;
+    margin: 3px;
+    padding: 3px 0px 0px 5px;
+    width: clamp(270px, 50vw, 600px);
+}
+.js-ans{
+    background-color: rgba(225, 228, 255, 0.655);
+    border-radius: 9px;
+    text-align: center;
+    margin: 5px 25px 15px 25px;
+}
+
 h2{
     text-align: center;
 }
@@ -353,14 +390,20 @@ footer a{
 .F-auth{
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
     margin: 10px 5px 5px 5px;
+}
+.contact-div p{
+ color: white;
 }
 
 
 
 
 @media(max-width: 767px){
+    .small-block{
+        margin-top: -45px;
+    }
     .hero-section{
         height: clamp(520px, 100vh, 800px);
     }
@@ -426,6 +469,9 @@ footer a{
         padding: 4px 3px 3px 3px;
         border-radius: 8px;
         margin: 2px 2px 2px 2px;   
+    }
+    .contact-div p{
+        margin: 7px 0px 0px 0px;
     }
 }
 @media(min-width:768px){
