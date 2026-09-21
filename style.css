@@ -71,6 +71,7 @@ body{
 
 
 
+
 header{
     position: fixed;
     left: 0;
@@ -173,6 +174,66 @@ header div{
     width: fit-content;
     margin: auto;
 }
+
+
+/*/Animations For the images
+/*/
+.fb-img,.social-img{
+    animation-name: fb-animation;
+}
+.ig-img{
+    animation-name: ig-animation;
+}
+.tt-img{
+    animation-name: tt-animation;
+}
+.like-img{
+    animation-name: like-animation;
+}
+.images{
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+@keyframes fb-animation{
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(30px,40px);
+    }
+}
+@keyframes ig-animation{
+    from{
+        transform: translate(40px,40px);
+    }
+    to{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes tt-animation{
+    from{
+        transform: translate(-40px,40px);
+    }
+    to{
+        transform: translate(50px,10px);
+    }
+}
+@keyframes like-animation{
+    from{
+        transform: translate(50px,10px);
+    }
+    to{
+        transform: translate(-40px,40px);
+    }
+}
+
+
+
+/*/End of animations
+/*/
+
+
 .hero-images img:not(.bg-hero-image){
     position: absolute;
     /*clamp(MINIMUM, PREFERRED, MAXIMUM)*/
@@ -378,6 +439,9 @@ h2{
 .hts-get-started p{
     font-size: clamp(1rem, 1.5vw, 2rem);
 }
+main{
+    margin-bottom: 40px;
+}
 footer{
     background-color: rgba(17, 17, 17, 0.927);
     display: flex;
@@ -473,6 +537,14 @@ footer a{
     .contact-div p{
         margin: 7px 0px 0px 0px;
     }
+    @keyframes tt-animation{
+    from{
+        transform: translate(-10px,40px);
+    }
+    to{
+        transform: translate(50px,10px);
+    }
+}
 }
 @media(min-width:768px){
     .hamburger-menu{
